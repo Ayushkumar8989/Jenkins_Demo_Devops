@@ -1,0 +1,10 @@
+#Jenkins Devops Demo
+
+Repository used for jenkins CI/CD demostrations as one.
+
+
+##Components
+
+- Application configuration 
+- Devops validation scripts
+- Jenkins Pipeline
