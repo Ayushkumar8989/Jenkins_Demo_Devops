@@ -14,6 +14,14 @@ pipeline {
                     echo "Branch : ${BRANCH_NAME:-main}"
                     echo "Node : $(hostname)"
                     echo "Workspace : ${WORKSPACE}"
+
+
+                    echo 
+                    echo "Java Version:" 
+                    java -version 
+                    echo 
+                    echo "Git Version:" 
+                    git --version
                 '''
             }
         }
@@ -26,6 +34,8 @@ pipeline {
                     test -f app/app.conf
                     test -f config/deployment.conf
                     test -x scripts/health-check.sh
+
+                    chmod +x scripts/health-check.sh
 
                     echo "Required files are present"
 
